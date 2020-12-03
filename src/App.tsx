@@ -1,14 +1,12 @@
 import React from "react";
 import Form from "./components/Form";
+import ToDoList from "./components/ToDoList";
 
 function App() {
   return (
     <div>
       <Form />
-      <ul>
-        <li>Build to-do app</li>
-        <li>Practice TypeScript</li>
-      </ul>
+      <ToDoList />
     </div>
   );
 }
