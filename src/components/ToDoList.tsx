@@ -1,10 +1,10 @@
 import React from "react";
+import ToDoItem from "./ToDoItem";
 
 function ToDoList() {
   return (
     <ul>
-      <li>Build to-do app</li>
-      <li>Practice TypeScript</li>
+      <ToDoItem />
     </ul>
   );
 }
