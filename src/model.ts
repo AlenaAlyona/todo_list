@@ -1,4 +1,5 @@
-export interface ToDoItem {
+export interface Item {
+  id: number;
   text: string;
   complete: boolean;
 }
