@@ -1,11 +1,6 @@
 import React from "react";
-import { Item } from "../model";
+import { Props } from "../model";
 import "./toDoItem.css";
-
-type Props = {
-  item: Item;
-  toggleDone: () => void;
-};
 
 function ToDoItem(props: Props) {
   return (
