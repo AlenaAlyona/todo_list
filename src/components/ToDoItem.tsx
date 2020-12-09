@@ -10,17 +10,21 @@ function ToDoItem(props: Props) {
   return (
     <div>
       {props.item.complete ? (
-        <span>
-          <button onClick={props.toggleDone}>[ X ]</button>
+        <label className="container">
+          <input type="checkbox" onClick={props.toggleDone} />
+          <span className="checkmark"></span>
+          {/* <button onClick={props.toggleDone}>[ X ]</button> */}
           <span style={{ textDecoration: "line-through" }}>
             {props.item.text}
           </span>{" "}
-        </span>
+        </label>
       ) : (
-        <span>
-          <button onClick={props.toggleDone}>[ ]</button>
+        <label className="container">
+          <input type="checkbox" onClick={props.toggleDone} />
+          <span className="checkmark"></span>
+          {/* <button onClick={props.toggleDone}>[ ]</button> */}
           <span>{props.item.text}</span>{" "}
-        </span>
+        </label>
       )}
     </div>
   );
