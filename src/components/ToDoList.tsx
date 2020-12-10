@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Item, PropsList } from "../model";
+import { PropsList } from "../model";
 import ToDoItem from "./ToDoItem";
 
 export default function ToDoList(props: PropsList) {
-  // note the <Item[]> syntax!
-  const [list, setList] = useState<PropsList>(props);
-
   return (
     <div>
       {props.list.map((item) => {

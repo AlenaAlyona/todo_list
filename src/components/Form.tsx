@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Form() {
+  const [todo, setTodo] = useState("");
+  console.log(todo);
+  const submit = (event: any) => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
-      <input type="text" required></input>
+    <form onSubmit={submit}>
+      <input
+        type="text"
+        name="todo"
+        id="todo"
+        required
+        onChange={(e) => setTodo(e.target.value)}
+      ></input>
       <button type="submit">Create</button>
     </form>
   );
