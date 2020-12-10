@@ -27,6 +27,16 @@ function App() {
     setList(newList);
   };
 
+  const handleSubmit = (todo: string) => {
+    const newId: number = Math.floor(Math.random() * 1000000000);
+    const newTodo: Item = {
+      id: newId,
+      text: todo,
+      complete: false,
+    };
+    setList([...list, newTodo]);
+  };
+
   return (
     <div>
       <Form />

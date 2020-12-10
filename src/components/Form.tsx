@@ -13,6 +13,7 @@ function Form() {
         type="text"
         name="todo"
         id="todo"
+        placeholder="add your new todo"
         required
         onChange={(e) => setTodo(e.target.value)}
       ></input>
