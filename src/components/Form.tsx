@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { PropsForm } from "../model";
 
-function Form() {
+function Form(props: PropsForm) {
   const [todo, setTodo] = useState("");
   console.log(todo);
+
   const submit = (event: any) => {
     event.preventDefault();
+    props.handleSubmit(todo);
+    setTodo("");
   };
 
   return (
@@ -14,6 +18,7 @@ function Form() {
         name="todo"
         id="todo"
         placeholder="add your new todo"
+        value={todo}
         required
         onChange={(e) => setTodo(e.target.value)}
       ></input>

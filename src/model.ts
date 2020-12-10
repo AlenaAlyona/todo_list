@@ -13,3 +13,7 @@ export type PropsList = {
   list: Item[];
   toggle: (id: number) => void;
 };
+
+export type PropsForm = {
+  handleSubmit: (todo: string) => void;
+};

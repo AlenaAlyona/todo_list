@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PropsList } from "../model";
 import ToDoItem from "./ToDoItem";
 

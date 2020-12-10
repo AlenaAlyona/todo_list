@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div>
-      <Form />
+      <Form handleSubmit={handleSubmit} />
       <ToDoList list={list} toggle={toggle} />
     </div>
   );
