@@ -37,10 +37,16 @@ function App() {
     setList([...list, newTodo]);
   };
 
+  const handleDelete = (id: number) => {
+    const deleteItem = list.filter((item, i) => {
+      return i !== id;
+    });
+  };
+
   return (
     <div>
       <Form handleSubmit={handleSubmit} />
-      <ToDoList list={list} toggle={toggle} />
+      <ToDoList list={list} toggle={toggle} onDelete={handleDelete} />
     </div>
   );
 }

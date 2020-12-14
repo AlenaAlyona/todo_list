@@ -12,6 +12,7 @@ export type Props = {
 export type PropsList = {
   list: Item[];
   toggle: (id: number) => void;
+  onDelete: (id: number) => void;
 };
 
 export type PropsForm = {
