@@ -46,7 +46,7 @@ function App() {
   return (
     <div>
       <Form handleSubmit={handleSubmit} />
-      <ToDoList list={list} toggle={toggle} onDelete={handleDelete} />
+      <ToDoList list={list} toggle={toggle} handleDelete={handleDelete} />
     </div>
   );
 }

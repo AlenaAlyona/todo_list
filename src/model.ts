@@ -7,12 +7,13 @@ export interface Item {
 export type Props = {
   item: Item;
   toggleDone: () => void;
+  onDelete: () => void;
 };
 
 export type PropsList = {
   list: Item[];
   toggle: (id: number) => void;
-  onDelete: (id: number) => void;
+  handleDelete: (id: number) => void;
 };
 
 export type PropsForm = {

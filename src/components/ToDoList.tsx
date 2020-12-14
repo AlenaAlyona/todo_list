@@ -12,6 +12,7 @@ export default function ToDoList(props: PropsList) {
               key={item.id}
               item={item}
               toggleDone={() => props.toggle(item.id)}
+              onDelete={() => props.handleDelete(item.id)}
             />
           </div>
         );
