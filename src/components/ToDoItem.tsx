@@ -14,7 +14,7 @@ function ToDoItem(props: Props) {
           <span style={{ textDecoration: "line-through" }}>
             {props.item.text}
           </span>{" "}
-          <AiIcons.AiFillDelete />
+          <AiIcons.AiFillDelete onClick={props.onDelete} />
           <MdIcons.MdModeEdit />
         </label>
       ) : (
@@ -22,7 +22,7 @@ function ToDoItem(props: Props) {
           <input type="checkbox" onClick={props.toggleDone} />
           <span className="checkmark"></span>
           <span>{props.item.text}</span>
-          <AiIcons.AiFillDelete />
+          <AiIcons.AiFillDelete onClick={props.onDelete} />
           <MdIcons.MdModeEdit />
         </label>
       )}
