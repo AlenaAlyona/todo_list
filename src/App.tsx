@@ -38,7 +38,6 @@ function App() {
   };
 
   const handleDelete = (id: number) => {
-    console.log("ID", id);
     setList(
       list.filter((item) => {
         return item.id !== id;
