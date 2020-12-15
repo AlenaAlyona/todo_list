@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as AiIcons from "react-icons/ai";
 import * as MdIcons from "react-icons/md";
 import * as FiIcons from "react-icons/fi";
-import * as GiIcons from "react-icons/gi";
+import * as RiIcons from "react-icons/ri";
 import { Props } from "../model";
 import "./toDoItem.css";
 
@@ -34,8 +34,8 @@ function ToDoItem(props: Props) {
           id="editVal"
           onChange={handleEdit}
         />
-        <FiIcons.FiSave />
-        <GiIcons.GiCancel onClick={handleCancel} />
+        <RiIcons.RiSave3Fill />
+        <MdIcons.MdCancel onClick={handleCancel} />
       </div>
     );
   } else {
@@ -48,16 +48,16 @@ function ToDoItem(props: Props) {
             <span style={{ textDecoration: "line-through" }}>
               {props.item.text}
             </span>{" "}
-            <AiIcons.AiFillDelete onClick={props.onDelete} />
             <MdIcons.MdModeEdit onClick={editItem} />
+            <AiIcons.AiFillDelete onClick={props.onDelete} />
           </label>
         ) : (
           <label className="container">
             <input type="checkbox" onClick={props.toggleDone} />
             <span className="checkmark"></span>
             <span>{props.item.text}</span>
-            <AiIcons.AiFillDelete onClick={props.onDelete} />
             <MdIcons.MdModeEdit onClick={editItem} />
+            <AiIcons.AiFillDelete onClick={props.onDelete} />
           </label>
         )}
       </div>
