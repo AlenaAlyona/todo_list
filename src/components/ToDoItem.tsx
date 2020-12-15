@@ -16,6 +16,10 @@ function ToDoItem(props: Props) {
 
   const handleEdit = () => {};
 
+  const handleCancel = () => {
+    setEditMode(false);
+  };
+
   if (editMode) {
     return (
       <div>
@@ -31,7 +35,7 @@ function ToDoItem(props: Props) {
           onChange={handleEdit}
         />
         <FiIcons.FiSave />
-        <GiIcons.GiCancel />
+        <GiIcons.GiCancel onClick={handleCancel} />
       </div>
     );
   } else {
