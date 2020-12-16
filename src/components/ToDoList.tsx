@@ -12,6 +12,7 @@ export default function ToDoList(props: PropsList) {
             item={item}
             toggleDone={() => props.toggle(item.id)}
             onDelete={() => props.handleDelete(item.id)}
+            onEdit={props.handleEdit}
           />
         );
       })}

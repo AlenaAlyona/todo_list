@@ -45,10 +45,24 @@ function App() {
     );
   };
 
+  const handleEdit = (editVal: string, id: number) => {
+    list.forEach((item) => {
+      if (item.id === id) {
+        return (item.text = editVal);
+      }
+    });
+    setList(list);
+  };
+
   return (
     <div>
       <Form handleSubmit={handleSubmit} />
-      <ToDoList list={list} toggle={toggle} handleDelete={handleDelete} />
+      <ToDoList
+        list={list}
+        toggle={toggle}
+        handleDelete={handleDelete}
+        handleEdit={handleEdit}
+      />
     </div>
   );
 }

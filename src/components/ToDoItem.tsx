@@ -8,15 +8,29 @@ import "./toDoItem.css";
 
 function ToDoItem(props: Props) {
   const [editMode, setEditMode] = useState(false);
-  // const [itemText, setItemText] = useState(props.item.text);
+  const [editVal, setEditVal] = useState(props.item.text);
 
   const editItem = () => {
     setEditMode(true);
   };
 
-  const handleEdit = () => {};
+  const handleEditVal = (event: any) => {
+    setEditVal(event.target.value);
+  };
 
   const handleCancel = () => {
+    if (editVal === "") {
+      setEditVal(props.item.text);
+    }
+    setEditMode(false);
+  };
+
+  const handleSave = () => {
+    if (editVal === "") {
+      setEditVal(props.item.text);
+    } else {
+      props.onEdit(editVal, props.item.id);
+    }
     setEditMode(false);
   };
 
@@ -29,12 +43,12 @@ function ToDoItem(props: Props) {
         </label>
         <input
           type="text"
-          value={props.item.text}
+          value={editVal}
           name="editVal"
           id="editVal"
-          onChange={handleEdit}
+          onChange={handleEditVal}
         />
-        <RiIcons.RiSave3Fill />
+        <RiIcons.RiSave3Fill onClick={handleSave} />
         <MdIcons.MdCancel onClick={handleCancel} />
       </div>
     );
