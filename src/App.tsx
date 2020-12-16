@@ -57,12 +57,16 @@ function App() {
   return (
     <div>
       <Form handleSubmit={handleSubmit} />
-      <ToDoList
-        list={list}
-        toggle={toggle}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-      />
+      {list.length === 0 ? (
+        <h2>You have nothing to do</h2>
+      ) : (
+        <ToDoList
+          list={list}
+          toggle={toggle}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
+      )}
     </div>
   );
 }
