@@ -1,29 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import { Item } from "./model";
 
 function App() {
-  const [list, setList] = useState<Item[]>([
-    {
-      id: 0,
-      text: "Make this app",
-      complete: false,
-    },
-    {
-      id: 1,
-      text: "Fall in love with TypeScript",
-      complete: false,
-    },
-  ]);
+  function useStickyState(defaultValue: Item[], key: string) {
+    const [value, setValue] = useState(() => {
+      const stickyValue = window.localStorage.getItem(key);
+      return stickyValue !== null ? JSON.parse(stickyValue) : defaultValue;
+    });
+    useEffect(() => {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+    return [value, setValue];
+  }
+
+  const [list, setList] = useStickyState([], "list");
+
   const toggle = (id: number) => {
-    const newList = list.map((item) => {
+    const newList = list.map((item: Item) => {
       if (item.id === id) {
         return { ...item, complete: !item.complete };
       } else {
         return item;
       }
     });
+
     setList(newList);
   };
 
@@ -39,19 +41,21 @@ function App() {
 
   const handleDelete = (id: number) => {
     setList(
-      list.filter((item) => {
+      list.filter((item: Item) => {
         return item.id !== id;
       })
     );
   };
 
   const handleEdit = (editVal: string, id: number) => {
-    list.forEach((item) => {
-      if (item.id === id) {
-        return (item.text = editVal);
-      }
-    });
-    setList(list);
+    setList(
+      list.map((item: Item) => {
+        if (item.id === id) {
+          item.text = editVal;
+        }
+        return item;
+      })
+    );
   };
 
   return (

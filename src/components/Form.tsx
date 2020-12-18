@@ -3,7 +3,6 @@ import { PropsForm } from "../model";
 
 function Form(props: PropsForm) {
   const [todo, setTodo] = useState("");
-  console.log(todo);
 
   const submit = (event: any) => {
     event.preventDefault();
