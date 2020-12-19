@@ -1,9 +1,15 @@
 .background {
   height: 100vh;
   width: 100vw;
-  top: 0;
+  bottom: 0;
   left: 0;
+  overflow: auto;
+  display: flex;
   position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dosis", sans-serif;
   background: linear-gradient(
     211deg,
     #ca392a,
@@ -30,10 +36,10 @@
   );
   background-size: 4200% 4200%;
 
-  -webkit-animation: AnimationName 999s ease infinite;
-  -moz-animation: AnimationName 999s ease infinite;
-  -o-animation: AnimationName 999s ease infinite;
-  animation: AnimationName 999s ease infinite;
+  -webkit-animation: AnimationName 360s ease infinite;
+  -moz-animation: AnimationName 360s ease infinite;
+  -o-animation: AnimationName 360s ease infinite;
+  animation: AnimationName 360s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -79,4 +85,9 @@
   100% {
     background-position: 49% 0%;
   }
+}
+
+.mainTitle {
+  font-weight: 400;
+  font-size: 32px;
 }
