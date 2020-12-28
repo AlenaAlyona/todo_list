@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as AiIcons from "react-icons/ai";
 import * as MdIcons from "react-icons/md";
-import * as FiIcons from "react-icons/fi";
 import * as RiIcons from "react-icons/ri";
 import { Props } from "../model";
 import "./toDoItem.css";
