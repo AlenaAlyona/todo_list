@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { PropsForm } from "../model";
+import "./form.css";
 
 function Form(props: PropsForm) {
   const [todo, setTodo] = useState("");
 
   const submit = (event: any) => {
     event.preventDefault();
-    props.handleSubmit(todo);
-    setTodo("");
+    if (todo.length > 0) {
+      props.handleSubmit(todo);
+      setTodo("");
+    } else {
+      console.log("Please fiil in this field");
+    }
   };
 
   return (
@@ -21,7 +26,9 @@ function Form(props: PropsForm) {
         required
         onChange={(e) => setTodo(e.target.value)}
       ></input>
-      <button type="submit">Create</button>
+      <button className="btnDefault">
+        <span className="btn">CREATE</span>
+      </button>
     </form>
   );
 }
