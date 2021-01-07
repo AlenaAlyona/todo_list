@@ -1,3 +1,8 @@
+.mainTitle {
+  font-weight: 400;
+  font-size: 32px;
+}
+
 .background {
   height: 100vh;
   width: 100vw;
@@ -10,85 +15,100 @@
   align-items: center;
   justify-content: center;
   font-family: "Dosis", sans-serif;
-  background: linear-gradient(
-    211deg,
-    #ca392a,
-    #e32d1b,
-    #e85344,
-    #ec5b18,
-    #e86f37,
-    #f09165,
-    #f2cd03,
-    #f5dd58,
-    #f7e78e,
-    #308907,
-    #4ba123,
-    #77ac5f,
-    #58b5c5,
-    #78b8c3,
-    #a2c3c8,
-    #001aea,
-    #5060e3,
-    #a1a7df,
-    #5b0ae3,
-    #874ee6,
-    #b494ea
-  );
-  background-size: 4200% 4200%;
-
-  -webkit-animation: AnimationName 120s ease infinite;
-  -moz-animation: AnimationName 120s ease infinite;
-  -o-animation: AnimationName 120s ease infinite;
-  animation: AnimationName 120s ease infinite;
+  animation: colorchange 175s linear 1s infinite; /* animation-name followed by duration in seconds*/
+  -webkit-animation: colorchange 175s linear 0s infinite alternate; /* Chrome and Safari */
 }
 
-@-webkit-keyframes AnimationName {
+@keyframes colorchange {
   0% {
-    background-position: 49% 0%;
+    background: #9796f0;
+    color: black;
+  }
+  10% {
+    background: #e0b9db;
+    color: black;
+  }
+  20% {
+    background: #fff6b7;
+    color: black;
+  }
+  30% {
+    background: #f5a218;
+    color: black;
+  }
+  40% {
+    background: #f12711;
+    color: black;
   }
   50% {
-    background-position: 52% 100%;
+    background: #9be15d;
+    color: black;
+  }
+  60% {
+    background: #64b3f4;
+    color: black;
+  }
+  70% {
+    background: #2d69f6;
+    color: black;
+  }
+  80% {
+    background: #7c6efd;
+    color: black;
+  }
+  90% {
+    background: #e9dcfa;
+    color: black;
   }
   100% {
-    background-position: 49% 0%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 49% 0%;
-  }
-  50% {
-    background-position: 52% 100%;
-  }
-  100% {
-    background-position: 49% 0%;
-  }
-}
-@-o-keyframes AnimationName {
-  0% {
-    background-position: 49% 0%;
-  }
-  50% {
-    background-position: 52% 100%;
-  }
-  100% {
-    background-position: 49% 0%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 49% 0%;
-  }
-  50% {
-    background-position: 52% 100%;
-  }
-  100% {
-    background-position: 49% 0%;
+    background: #fb8387;
+    color: black;
   }
 }
 
-.mainTitle {
-  font-weight: 400;
-  font-size: 32px;
-  color: white;
+@-webkit-keyframes colorchange /* Safari and Chrome */ {
+  0% {
+    background: #9796f0;
+    color: black;
+  }
+  10% {
+    background: #e0b9db;
+    color: black;
+  }
+  20% {
+    background: #f5a218;
+    color: black;
+  }
+  30% {
+    background: #f8677c;
+    color: black;
+  }
+  40% {
+    background: #f12711;
+    color: black;
+  }
+  50% {
+    background: #9be15d;
+    color: black;
+  }
+  60% {
+    background: #64b3f4;
+    color: black;
+  }
+  70% {
+    background: #2d69f6;
+    color: black;
+  }
+  80% {
+    background: #7c6efd;
+    color: black;
+  }
+  90% {
+    background: #e9dcfa;
+    color: black;
+  }
+  100% {
+    background: #fb8387;
+    color: black;
+  }
 }
