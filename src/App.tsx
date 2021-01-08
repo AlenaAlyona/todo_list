@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import { Item } from "./model";
-import "./app.css";
+import "./App.css";
 
 function App() {
   function useStickyState(defaultValue: Item[], key: string) {
