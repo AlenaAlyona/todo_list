@@ -35,7 +35,7 @@ function ToDoItem(props: Props) {
 
   if (editMode) {
     return (
-      <div>
+      <div className="itemDiv">
         <label className="container">
           <input type="checkbox" onClick={props.toggleDone} disabled />
           <span className="checkmark"></span>
