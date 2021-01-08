@@ -12,11 +12,10 @@ form {
 input {
   cursor: text;
   border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.5);
-  border-right-width: 0;
+  border-color: black;
   background-color: transparent;
-  color: white;
-  width: 20%;
+  color: black;
+  /* width: 20%; */
   padding: 11px;
 }
 
@@ -25,18 +24,18 @@ input:focus {
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(235, 235, 235);
+  color: black;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: rgb(235, 235, 235);
+  color: black;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: rgb(235, 235, 235);
+  color: black;
 }
 input,
 textarea,
@@ -45,6 +44,7 @@ button {
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
+  font-weight: 300;
 }
 
 textarea,
@@ -66,13 +66,13 @@ button {
 
 .btn {
   width: 100%;
-
+  border-left-width: 0;
   outline: none;
   text-decoration: none;
   border-radius: 0 5px 5px 0;
   letter-spacing: 1px;
   position: relative;
-  color: white;
+  color: black;
   line-height: 42px;
   font-size: 16px;
   padding: 10px 20px 12px 20px;
@@ -108,7 +108,7 @@ button {
 
 .btn::after {
   transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
 }
 
 .btn:hover::after {
@@ -121,5 +121,5 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s;
-  -webkit-text-fill-color: #fff !important;
+  -webkit-text-fill-color: black !important;
 }

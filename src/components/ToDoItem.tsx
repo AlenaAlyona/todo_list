@@ -47,8 +47,8 @@ function ToDoItem(props: Props) {
           id="editVal"
           onChange={handleEditVal}
         />
-        <RiIcons.RiSave3Fill onClick={handleSave} />
-        <MdIcons.MdCancel onClick={handleCancel} />
+        <RiIcons.RiSave3Fill className="iconItem" onClick={handleSave} />
+        <MdIcons.MdCancel className="iconItem" onClick={handleCancel} />
       </div>
     );
   } else {
@@ -61,16 +61,22 @@ function ToDoItem(props: Props) {
             <span style={{ textDecoration: "line-through" }}>
               {props.item.text}
             </span>{" "}
-            <MdIcons.MdModeEdit onClick={editItem} />
-            <AiIcons.AiFillDelete onClick={props.onDelete} />
+            <MdIcons.MdModeEdit className="iconItem" onClick={editItem} />
+            <AiIcons.AiFillDelete
+              className="iconItem"
+              onClick={props.onDelete}
+            />
           </label>
         ) : (
           <label className="container">
             <input type="checkbox" onClick={props.toggleDone} />
             <span className="checkmark"></span>
             <span>{props.item.text}</span>
-            <MdIcons.MdModeEdit onClick={editItem} />
-            <AiIcons.AiFillDelete onClick={props.onDelete} />
+            <MdIcons.MdModeEdit className="iconItem" onClick={editItem} />
+            <AiIcons.AiFillDelete
+              className="iconItem"
+              onClick={props.onDelete}
+            />
           </label>
         )}
       </div>

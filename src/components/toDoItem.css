@@ -1,19 +1,22 @@
 .container {
-  display: block;
+  margin-top: 20px;
+  display: inline-block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 300;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  align-items: center;
 }
 
 /* Hide the browser's default checkbox */
 .container input {
-  position: absolute;
+  /* position: absolute; */
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -27,7 +30,7 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #f9f6f3;
 }
 
 /* On mouse-over, add a grey background color */
@@ -37,7 +40,7 @@
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: rgba(33, 202, 70, 0.87);
+  background-color: #81cd59;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -63,4 +66,8 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.iconItem {
+  font-size: 20px;
 }

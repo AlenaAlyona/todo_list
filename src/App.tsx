@@ -64,7 +64,7 @@ function App() {
       <p className="mainTitle">YOUR AWESOME TO DO LIST</p>
       <Form handleSubmit={handleSubmit} />
       {list.length === 0 ? (
-        <h2>You have nothing to do</h2>
+        <p className="defaultText">You have nothing to do</p>
       ) : (
         <ToDoList
           list={list}
