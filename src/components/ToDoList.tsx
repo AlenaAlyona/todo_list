@@ -1,10 +1,11 @@
 import React from "react";
 import { PropsList } from "../model";
 import ToDoItem from "./ToDoItem";
+import "./toDoList.css";
 
 export default function ToDoList(props: PropsList) {
   return (
-    <div>
+    <div className="listDiv">
       {props.list.map((item) => {
         return (
           <ToDoItem

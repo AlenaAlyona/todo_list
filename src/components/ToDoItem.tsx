@@ -53,7 +53,7 @@ function ToDoItem(props: Props) {
     );
   } else {
     return (
-      <div>
+      <div className="itemDiv">
         {props.item.complete ? (
           <label className="container">
             <input type="checkbox" onClick={props.toggleDone} />
